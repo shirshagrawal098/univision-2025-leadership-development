@@ -36,42 +36,42 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Prof. K N S Acharya',
             role: 'Pro Vice-Chancellor',
             affiliation: 'GITAM Bengaluru Campus',
-            image: 'https://images.pexels.com/photos/5397723/pexels-photo-5397723.jpeg',
+            image: "images/kns-acharya.png",
             linkedin: 'https://linkedin.com/in/prof-acharya-k-n-s-73a604a'
         },
         {
             name: 'Anupama Nithyanand',
             role: 'Director, CAIA',
             affiliation: 'GITAM Bengaluru Campus',
-            image: 'https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg',
+            image: 'https://pbs.twimg.com/profile_images/3731098743/cc6d4e4c5f47ec1a78f8e661ea6d00e1_400x400.jpeg',
             linkedin: 'https://linkedin.com/in/anupamanithyanand'
         },
         {
             name: 'Dr. Jayan Sen',
             role: 'Associate VP, Head of L&D',
             affiliation: 'Infosys Technologies',
-            image: 'https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg',
+            image: 'images/jayan.jpg',
             linkedin: 'https://linkedin.com/in/jayan-sen-ph-d'
         },
         {
             name: 'Prof. Gayatri Menon',
             role: 'Principal Faculty',
             affiliation: 'NID Ahmedabad',
-            image: 'https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg',
+            image: 'https://media.licdn.com/dms/image/v2/D5603AQHhnXNcrDGCPg/profile-displayphoto-shrink_400_400/B56ZXjTvLNHEAg-/0/1743275357700?e=1752105600&v=beta&t=cnGafgfZ9mF5ZDO62zF8Uu5Qo5yr8sk95_hzBP70jTs',
             linkedin: 'https://linkedin.com/in/dr-gayatri-menon-7ba9976'
         },
         {
             name: 'Dr. Nivine Richie',
             role: 'Associate Dean',
             affiliation: 'UNC Wilmington, USA',
-            image: 'https://images.pexels.com/photos/3778876/pexels-photo-3778876.jpeg',
+            image: 'https://media.licdn.com/dms/image/v2/D4E03AQH8YVLuGVQqWA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1706387639568?e=1752105600&v=beta&t=6UJMTBj3LxNbt7VjyUv9AeFOkp65sG5aHkGhGmHzLJg',
             linkedin: 'https://linkedin.com/in/nivine-richie-cfa'
         },
         {
             name: 'Mr. Dhananjay Thakur',
             role: 'Assistant Director',
             affiliation: 'Ernst & Young (EY), Pune',
-            image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg',
+            image: 'https://media.licdn.com/dms/image/v2/D4D03AQH1DAGgFwETIA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1727154434501?e=1752105600&v=beta&t=EocVOzGerXK5KDwMCunbzQ-9OEBhQPIM7sVsv8EEX7I',
             linkedin: 'https://linkedin.com/in/dhananjay-thakur-8885b311'
         }
     ];
@@ -107,9 +107,35 @@ document.addEventListener('DOMContentLoaded', function() {
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
 
-        // Removed carousel translation logic as scroll snapping is used now
+        if (prevBtn && nextBtn) {
+            // Get all facilitator cards
+            const cards = carousel.querySelectorAll('.facilitator-card');
+            const cardWidth = cards[0].offsetWidth;
+            
+            let currentIndex = 0;
+            const totalCards = cards.length;
 
-             // Removed carousel navigation event listeners as scroll snapping is used now
+            // Add click event listeners
+            nextBtn.addEventListener('click', () => {
+                if (currentIndex < totalCards - 1) {
+                    currentIndex++;
+                    carousel.scrollTo({
+                        left: currentIndex * (cardWidth + 32),
+                        behavior: 'smooth'
+                    });
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    carousel.scrollTo({
+                        left: currentIndex * (cardWidth + 32),
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        }
     }
 
     // Intersection Observer for fade-in animations
