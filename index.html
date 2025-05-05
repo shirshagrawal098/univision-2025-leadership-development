@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniVision 2025 - Leadership Development Program</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-[Poppins] bg-gray-50">
+    <!-- Sticky Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <img src="/project/sandbox/user-workspace/images/logo.png" alt="CAIA Logo" class="h-10 w-auto" />
+                    <div class="text-2xl font-bold text-[#007367]">UniVision 2025</div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-[#007367] hover:text-[#004740] transition-colors">Home</a>
+                    <a href="about.html" class="hover:text-[#007367] transition-colors">About</a>
+                    <a href="events.html" class="hover:text-[#007367] transition-colors">Events</a>
+                    <a href="resources.html" class="hover:text-[#007367] transition-colors">Resources</a>
+                    <a href="gallery.html" class="hover:text-[#007367] transition-colors">Gallery</a>
+                    <a href="contact.html" class="hover:text-[#007367] transition-colors">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-[#007367]">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-20 min-h-screen bg-gradient-to-r from-[#007367] to-[#004740] flex items-center">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Shaping the Future of Academic Potential</h1>
+            <p class="text-xl mb-8">A leadership development program by CAIA at GITAM University, Bengaluru Campus</p>
+            <a href="#leaders" class="bg-white text-[#007367] px-8 py-3 rounded-full font-semibold hover:bg-[#f4e4c9] transition-colors">Know More</a>
+        </div>
+    </header>
+
+    <!-- Leaders' Key Messages -->
+    <section id="leaders" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#007367]">Our Leaders' Vision</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Leader 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
+                        <img src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg" alt="Sribharat Mathukumilli" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Sribharat Mathukumilli</h3>
+                    <p class="text-gray-600 mb-2 text-center">President</p>
+                    <p class="text-center italic">"Leaders can make us realise our Vision 2040."</p>
+                </div>
+
+                <!-- Leader 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
+                        <img src="https://images.pexels.com/photos/5397723/pexels-photo-5397723.jpeg" alt="Prof. KNS Acharya" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Prof. KNS Acharya</h3>
+                    <p class="text-gray-600 mb-2 text-center">Pro Vice-Chancellor</p>
+                    <p class="text-center italic">"Our vision is to foster leadership that drives change."</p>
+                </div>
+
+                <!-- Leader 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
+                        <img src="https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg" alt="Anupama Nithyanand" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Anupama Nithyanand</h3>
+                    <p class="text-gray-600 mb-2 text-center">CAIA Director</p>
+                    <p class="text-center italic">"We are committed to building a community of proactive leaders."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Facilitators -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#007367]">Expert Facilitators</h2>
+            <div class="relative">
+            <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide" id="facilitatorCarousel" style="scroll-behavior: smooth;">
+            <!-- Facilitator cards will be dynamically populated via JavaScript -->
+            <div class="facilitator-card">
+                <div class="facilitator-image">
+                    <img src="https://images.pexels.com/photos/5397723/pexels-photo-5397723.jpeg" alt="Prof. K N S Acharya">
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-center">Prof. K N S Acharya</h3>
+                <p class="text-gray-600 mb-1 text-center">Pro Vice-Chancellor</p>
+                <p class="text-gray-500 mb-4 text-center">GITAM Bengaluru Campus</p>
+                <div class="text-center">
+                    <a href="https://linkedin.com/in/prof-acharya-k-n-s-73a604a" target="_blank" rel="noopener noreferrer" class="text-[#007367] hover:text-[#004740] transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="facilitator-card">
+                <div class="facilitator-image">
+                    <img src="https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg" alt="Anupama Nithyanand">
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-center">Anupama Nithyanand</h3>
+                <p class="text-gray-600 mb-1 text-center">Director, CAIA</p>
+                <p class="text-gray-500 mb-4 text-center">GITAM Bengaluru Campus</p>
+                <div class="text-center">
+                    <a href="https://linkedin.com/in/anupamanithyanand" target="_blank" rel="noopener noreferrer" class="text-[#007367] hover:text-[#004740] transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="facilitator-card">
+                <div class="facilitator-image">
+                    <img src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg" alt="Dr. Jayan Sen">
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-center">Dr. Jayan Sen</h3>
+                <p class="text-gray-600 mb-1 text-center">Associate VP, Head of L&D</p>
+                <p class="text-gray-500 mb-4 text-center">Infosys Technologies</p>
+                <div class="text-center">
+                    <a href="https://linkedin.com/in/jayan-sen-ph-d" target="_blank" rel="noopener noreferrer" class="text-[#007367] hover:text-[#004740] transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="facilitator-card">
+                <div class="facilitator-image">
+                    <img src="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg" alt="Prof. Gayatri Menon">
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-center">Prof. Gayatri Menon</h3>
+                <p class="text-gray-600 mb-1 text-center">Principal Faculty</p>
+                <p class="text-gray-500 mb-4 text-center">NID Ahmedabad</p>
+                <div class="text-center">
+                    <a href="https://linkedin.com/in/dr-gayatri-menon-7ba9976" target="_blank" rel="noopener noreferrer" class="text-[#007367] hover:text-[#004740] transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="facilitator-card">
+                <div class="facilitator-image">
+                    <img src="https://images.pexels.com/photos/3778876/pexels-photo-3778876.jpeg" alt="Dr. Nivine Richie">
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-center">Dr. Nivine Richie</h3>
+                <p class="text-gray-600 mb-1 text-center">Associate Dean</p>
+                <p class="text-gray-500 mb-4 text-center">UNC Wilmington, USA</p>
+                <div class="text-center">
+                    <a href="https://linkedin.com/in/nivine-richie-cfa" target="_blank" rel="noopener noreferrer" class="text-[#007367] hover:text-[#004740] transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="facilitator-card">
+                <div class="facilitator-image">
+                    <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg" alt="Mr. Dhananjay Thakur">
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-center">Mr. Dhananjay Thakur</h3>
+                <p class="text-gray-600 mb-1 text-center">Assistant Director</p>
+                <p class="text-gray-500 mb-4 text-center">Ernst & Young (EY), Pune</p>
+                <div class="text-center">
+                    <a href="https://linkedin.com/in/dhananjay-thakur-8885b311" target="_blank" rel="noopener noreferrer" class="text-[#007367] hover:text-[#004740] transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg text-[#007367] hover:text-[#004740]" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg text-[#007367] hover:text-[#004740]" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+</div>
+</section>
+
+        <!-- Footer -->
+        <footer class="bg-[#004740] text-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">UniVision 2025</h3>
+                        <p>A leadership development program by CAIA at GITAM University, Bengaluru Campus</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="hover:text-[#8bcbb7] transition-colors">Home</a></li>
+                            <li><a href="events.html" class="hover:text-[#8bcbb7] transition-colors">Events</a></li>
+                            <li><a href="resources.html" class="hover:text-[#8bcbb7] transition-colors">Resources</a></li>
+                            <li><a href="gallery.html" class="hover:text-[#8bcbb7] transition-colors">Gallery</a></li>
+                            <li><a href="contact.html" class="hover:text-[#8bcbb7] transition-colors">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Contact</h3>
+                        <p>CAIA</p>
+                        <p>GITAM University</p>
+                        <p>Bengaluru Campus</p>
+                        <div class="flex space-x-4 mt-4">
+                            <a href="#" class="hover:text-[#8bcbb7] transition-colors"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="hover:text-[#8bcbb7] transition-colors"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="hover:text-[#8bcbb7] transition-colors"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-[#8bcbb7] mt-8 pt-8 text-center">
+                    <p>&copy; UniVision 2025. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
