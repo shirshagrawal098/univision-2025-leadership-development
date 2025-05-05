@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - UniVision 2025</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-[Poppins] bg-gray-50">
+    <!-- Sticky Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <img src="images/caia_logo_placeholder.png" alt="CAIA Logo" class="h-10 w-auto" />
+                    <div class="text-2xl font-bold text-[#007367]">UniVision 2025</div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-[#007367] transition-colors">Home</a>
+                    <a href="about.html" class="hover:text-[#007367] transition-colors">About</a>
+                    <a href="events.html" class="text-[#007367] hover:text-[#004740] transition-colors">Events</a>
+                    <a href="resources.html" class="hover:text-[#007367] transition-colors">Resources</a>
+                    <a href="gallery.html" class="hover:text-[#007367] transition-colors">Gallery</a>
+                    <a href="contact.html" class="hover:text-[#007367] transition-colors">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-[#007367]">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-20 bg-[#007367] text-white">
+        <div class="container mx-auto px-4 py-16">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-center">Upcoming Events</h1>
+            <p class="text-xl text-center max-w-2xl mx-auto">Join our transformative leadership development sessions and workshops.</p>
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <section class="py-8 bg-white border-b">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center space-x-4">
+                <button class="filter-btn active px-6 py-2 rounded-full bg-[#007367] text-white hover:bg-[#004740] transition-colors" data-filter="all">
+                    All Events
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-[#007367] hover:text-white transition-colors" data-filter="upcoming">
+                    Upcoming
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-[#007367] hover:text-white transition-colors" data-filter="completed">
+                    Completed
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Grid -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Event Card 1 -->
+                <div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-status="upcoming">
+                    <div class="relative">
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Leadership Survey" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Upcoming</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Leadership Reflection Survey</h3>
+                        <p class="text-gray-600 mb-4">7–14 Feb, 2025</p>
+                        <div class="flex items-center text-gray-500 mb-4">
+                            <i class="far fa-clock mr-2"></i>
+                            <span>Duration: 1 week</span>
+                        </div>
+                        <a href="#" class="inline-block bg-[#007367] text-white px-6 py-2 rounded-full hover:bg-[#004740] transition-colors">
+                            Start Survey
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-status="upcoming">
+                    <div class="relative">
+                        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg" alt="StrengthsFinder Assessment" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Upcoming</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Gallup StrengthsFinder Assessment</h3>
+                        <p class="text-gray-600 mb-4">28 Feb – 17 Mar, 2025</p>
+                        <div class="flex items-center text-gray-500 mb-4">
+                            <i class="far fa-clock mr-2"></i>
+                            <span>Duration: 2.5 weeks</span>
+                        </div>
+                        <a href="#" class="inline-block bg-[#007367] text-white px-6 py-2 rounded-full hover:bg-[#004740] transition-colors">
+                            Start Assessment
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Event Card 3 -->
+                <div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-status="upcoming">
+                    <div class="relative">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Personal Effectiveness" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Upcoming</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Personal Effectiveness: 7 Habits</h3>
+                        <p class="text-gray-600 mb-4">19–20 Mar, 2025</p>
+                        <div class="flex items-center text-gray-500 mb-4">
+                            <i class="far fa-clock mr-2"></i>
+                            <span>Duration: 2 days</span>
+                        </div>
+                        <a href="#" class="inline-block bg-[#007367] text-white px-6 py-2 rounded-full hover:bg-[#004740] transition-colors">
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Event Card 4 -->
+                <div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-status="upcoming">
+                    <div class="relative">
+                        <img src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg" alt="Empathy Workshop" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Upcoming</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Empathy & Emotional Intelligence</h3>
+                        <p class="text-gray-600 mb-4">29–30 Apr, 2025</p>
+                        <div class="flex items-center text-gray-500 mb-4">
+                            <i class="far fa-clock mr-2"></i>
+                            <span>Duration: 2 days</span>
+                        </div>
+                        <a href="#" class="inline-block bg-[#007367] text-white px-6 py-2 rounded-full hover:bg-[#004740] transition-colors">
+                            Know More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Completed Event Card (Example) -->
+                <div class="event-card bg-white rounded-lg shadow-lg overflow-hidden opacity-75" data-status="completed">
+                    <div class="relative">
+                        <img src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg" alt="Past Workshop" class="w-full h-48 object-cover grayscale">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-gray-500 text-white px-3 py-1 rounded-full text-sm">Completed</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Leadership Orientation</h3>
+                        <p class="text-gray-600 mb-4">15 Jan, 2025</p>
+                        <div class="flex items-center text-gray-500 mb-4">
+                            <i class="far fa-clock mr-2"></i>
+                            <span>Duration: 1 day</span>
+                        </div>
+                        <button disabled class="inline-block bg-gray-400 text-white px-6 py-2 rounded-full cursor-not-allowed">
+                            Event Completed
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#004740] text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">UniVision 2025</h3>
+                    <p>A leadership development program by CAIA at GITAM University, Bengaluru Campus</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-[#8bcbb7] transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-[#8bcbb7] transition-colors">About</a></li>
+                        <li><a href="resources.html" class="hover:text-[#8bcbb7] transition-colors">Resources</a></li>
+                        <li><a href="gallery.html" class="hover:text-[#8bcbb7] transition-colors">Gallery</a></li>
+                        <li><a href="contact.html" class="hover:text-[#8bcbb7] transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact</h3>
+                    <p>CAIA</p>
+                    <p>GITAM University</p>
+                    <p>Bengaluru Campus</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="hover:text-[#8bcbb7] transition-colors"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-[#8bcbb7] transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-[#8bcbb7] transition-colors"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-[#8bcbb7] mt-8 pt-8 text-center">
+                <p>&copy; UniVision 2025. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+    
+    <!-- Events Filter JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const eventCards = document.querySelectorAll('.event-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active', 'bg-[#007367]', 'text-white'));
+                    filterBtns.forEach(b => b.classList.add('bg-gray-200', 'text-gray-700'));
+                    
+                    // Add active class to clicked button
+                    btn.classList.remove('bg-gray-200', 'text-gray-700');
+                    btn.classList.add('active', 'bg-[#007367]', 'text-white');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    eventCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-status') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
