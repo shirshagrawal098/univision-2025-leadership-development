@@ -76,10 +76,58 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
 
-    // Initialize facilitator carousel
+    // Initialize facilitator carousel with drag scroll functionality
     const carousel = document.getElementById('facilitatorCarousel');
     if (carousel) {
+        let isDragging = false;
+        let startX;
+        let scrollLeft;
         let currentIndex = 0;
+
+        // Add mouse event listeners for drag scrolling
+        carousel.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            carousel.classList.add('dragging');
+            startX = e.pageX - carousel.offsetLeft;
+            scrollLeft = carousel.scrollLeft;
+        });
+
+        carousel.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const x = e.pageX - carousel.offsetLeft;
+            const walk = (x - startX);
+            carousel.scrollLeft = scrollLeft - walk;
+        });
+
+        carousel.addEventListener('mouseup', () => {
+            isDragging = false;
+            carousel.classList.remove('dragging');
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            isDragging = false;
+            carousel.classList.remove('dragging');
+        });
+
+        // Add touch events for mobile devices
+        carousel.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            startX = e.touches[0].pageX - carousel.offsetLeft;
+            scrollLeft = carousel.scrollLeft;
+        });
+
+        carousel.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const x = e.touches[0].pageX - carousel.offsetLeft;
+            const walk = (x - startX);
+            carousel.scrollLeft = scrollLeft - walk;
+        });
+
+        carousel.addEventListener('touchend', () => {
+            isDragging = false;
+        });
 
         // Create facilitator cards
         facilitators.forEach(facilitator => {
