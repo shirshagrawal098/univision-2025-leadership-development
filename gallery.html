@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/gitam-logo.png">
+  
   <style>
     .event-tile {
       position: relative;
@@ -50,8 +54,13 @@
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center py-4">
                 <div class="flex items-center space-x-4">
-                    <img src="images/gitam-logo.png" alt="GITAM Logo" class="h-16 w-auto transition-transform duration-300 hover:scale-105" />
-                    <div class="text-2xl font-bold text-[#007367]">UniVision 2025</div>
+                  <img 
+                      src="https://raw.githubusercontent.com/shirshagrawal098/univision-2025-leadership-development/refs/heads/main/images/logo.png" 
+                      alt="GITAM Logo" 
+                      class="h-12 md:h-16 lg:h-20 w-auto object-contain max-w-full transition-transform duration-300 hover:scale-105" 
+                      onerror="this.onerror=null; this.src='images/gitam-logo.png';"
+                  />
+                    <!-- <div class="text-2xl font-bold text-[#007367]">UniVision 2025</div> -->
                 </div>
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="hover:text-[#007367] transition-colors">Home</a>
@@ -77,16 +86,14 @@
 
   <section class="py-16">
     <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-3 gap-8">
-        <a href="gallery_leadership_survey.html" class="event-tile" aria-label="Leadership Reflection Survey Gallery">
-          <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Leadership Reflection Survey" />
+      <div class="grid md:grid-cols-1 gap-8 max-w-2xl mx-auto">
+        <a href="gallery_7habits.html" class="event-tile" aria-label="Personal Effectiveness Through 7 Habits Gallery">
+          <img src="https://raw.githubusercontent.com/shirshagrawal098/univision-2025-leadership-development/refs/heads/main/images/event101.jpeg" 
+               alt="Personal Effectiveness Through 7 Habits"
+               onerror="this.src='images/gitam-logo.png';" 
+               class="h-[300px] w-full object-cover" />
           <div class="overlay">View Gallery</div>
-          <h3 class="mt-2 text-center font-semibold text-lg text-gray-700">Leadership Reflection Survey</h3>
-        </a>
-        <a href="gallery_strengthsfinder.html" class="event-tile" aria-label="Gallup StrengthsFinder Assessment Gallery">
-          <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg" alt="Gallup StrengthsFinder Assessment" />
-          <div class="overlay">View Gallery</div>
-          <h3 class="mt-2 text-center font-semibold text-lg text-gray-700">Gallup StrengthsFinder Assessment</h3>
+          <h3 class="mt-2 text-center font-semibold text-xl text-gray-700">Personal Effectiveness Improvements Through 7 Habits</h3>
         </a>
       </div>
     </div>
