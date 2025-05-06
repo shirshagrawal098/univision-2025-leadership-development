@@ -16,10 +16,24 @@
 #facilitatorCarousel {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    cursor: grab;
+    user-select: none;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+#facilitatorCarousel.dragging {
+    cursor: grabbing;
+    scroll-behavior: auto; /* Disable smooth scrolling while dragging */
 }
 
 #facilitatorCarousel .facilitator-card {
     scroll-snap-align: start;
+    pointer-events: none; /* Prevent card interactions while dragging */
+}
+
+#facilitatorCarousel:not(.dragging) .facilitator-card {
+    pointer-events: auto; /* Re-enable card interactions when not dragging */
 }
 
 /* Smooth Scroll Behavior */
