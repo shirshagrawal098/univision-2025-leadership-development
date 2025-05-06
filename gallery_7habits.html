@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personal Effectiveness Through 7 Habits - UniVision 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/gitam-logo.png">
+  
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-item {
+      position: relative;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      background: white;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover {
+      transform: scale(1.03);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 1rem;
+      background-color: #007367;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .back-btn:hover {
+      background-color: #004740;
+    }
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.9);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox.active {
+      display: flex;
+    }
+    .lightbox-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90vh;
+    }
+    .lightbox-image {
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 0.5rem;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: white;
+      color: #007367;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .lightbox-nav:hover {
+      background-color: #f4e4c9;
+    }
+    .lightbox-prev {
+      left: -60px;
+    }
+    .lightbox-next {
+      right: -60px;
+    }
+  </style>
+</head>
+<body class="font-[Poppins] bg-gray-50">
+  <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <div class="flex items-center space-x-4">
+            <img 
+                src="https://raw.githubusercontent.com/shirshagrawal098/univision-2025-leadership-development/refs/heads/main/images/logo.png" 
+                alt="GITAM Logo" 
+                class="h-12 md:h-16 lg:h-20 w-auto object-contain max-w-full transition-transform duration-300 hover:scale-105" 
+                onerror="this.onerror=null; this.src='images/gitam-logo.png';"
+            />
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="index.html" class="hover:text-[#007367] transition-colors">Home</a>
+          <a href="about.html" class="hover:text-[#007367] transition-colors">About</a>
+          <a href="events.html" class="hover:text-[#007367] transition-colors">Events</a>
+          <a href="resources.html" class="hover:text-[#007367] transition-colors">Resources</a>
+          <a href="gallery.html" class="hover:text-[#007367] transition-colors">Gallery</a>
+          <a href="contact.html" class="hover:text-[#007367] transition-colors">Contact</a>
+        </div>
+        <button class="md:hidden text-[#007367]">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mx-auto px-4">
+    <div class="pt-28">
+      <a href="gallery.html" class="back-btn">← Back to Gallery</a>
+    </div>
+    <h1 class="text-3xl font-bold mb-8 text-[#007367]">Personal Effectiveness Improvements Through 7 Habits</h1>
+
+    <!-- March Section -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-semibold mb-6 text-[#007367]">March 2025</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://raw.githubusercontent.com/shirshagrawal098/univision-2025-leadership-development/refs/heads/main/images/event101.jpeg" 
+               alt="7 Habits Event - March" 
+               onerror="this.src='images/gitam-logo.png';" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://raw.githubusercontent.com/shirshagrawal098/univision-2025-leadership-development/refs/heads/main/images/event102.jpeg" 
+               alt="7 Habits Event - March" 
+               onerror="this.src='images/gitam-logo.png';" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://raw.githubusercontent.com/shirshagrawal098/univision-2025-leadership-development/refs/heads/main/images/event105.jpeg" 
+               alt="7 Habits Event - March" 
+               onerror="this.src='images/gitam-logo.png';" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://raw.githubusercontent.com/shirshagrawal098/univision-2025-leadership-development/refs/heads/main/images/event107.jpeg" 
+               alt="7 Habits Event - March" 
+               onerror="this.src='images/gitam-logo.png';" />
+        </div>
+      </div>
+    </div>
+
+    <!-- April Section -->
+    <div>
+      <h2 class="text-2xl font-semibold mb-6 text-[#007367]">April 2025</h2>
+      <p class="text-gray-600 italic text-center py-8">Coming soon...</p>
+    </div>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <span class="lightbox-close" id="lightbox-close">&times;</span>
+      <img src="" alt="" class="lightbox-image" id="lightbox-image" />
+      <div class="lightbox-nav lightbox-prev" id="lightbox-prev">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div class="lightbox-nav lightbox-next" id="lightbox-next">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-[#004740] text-white py-12 mt-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">UniVision 2025</h3>
+          <p>A leadership development program by CAIA at GITAM University, Bengaluru Campus</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-[#8bcbb7] transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-[#8bcbb7] transition-colors">About</a></li>
+            <li><a href="events.html" class="hover:text-[#8bcbb7] transition-colors">Events</a></li>
+            <li><a href="resources.html" class="hover:text-[#8bcbb7] transition-colors">Resources</a></li>
+            <li><a href="gallery.html" class="hover:text-[#8bcbb7] transition-colors">Gallery</a></li>
+            <li><a href="contact.html" class="hover:text-[#8bcbb7] transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Contact</h3>
+          <p>GITAM University</p>
+          <p>Bengaluru Campus</p>
+          <div class="flex space-x-4 mt-4">
+            <a href="#" class="hover:text-[#8bcbb7] transition-colors"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="hover:text-[#8bcbb7] transition-colors"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover:text-[#8bcbb7] transition-colors"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-[#8bcbb7] mt-8 pt-8 text-center">
+        <p>&copy; 2024 UniVision 2025. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    let currentIndex = 0;
+
+    function showLightbox(index) {
+      currentIndex = index;
+      lightboxImage.src = galleryItems[currentIndex].querySelector('img').src;
+      lightbox.classList.add('active');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+      lightboxImage.src = galleryItems[currentIndex].querySelector('img').src;
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % galleryItems.length;
+      lightboxImage.src = galleryItems[currentIndex].querySelector('img').src;
+    }
+
+    galleryItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        showLightbox(index);
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showPrev();
+    });
+    lightboxNext.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showNext();
+    });
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      else if (e.key === 'ArrowLeft') showPrev();
+      else if (e.key === 'ArrowRight') showNext();
+    });
+  </script>
+</body>
+</html>
