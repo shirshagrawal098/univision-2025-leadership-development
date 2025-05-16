@@ -32,7 +32,9 @@
                         class="h-12 md:h-16 lg:h-20 w-auto object-contain max-w-full transition-transform duration-300 hover:scale-105" 
                         onerror="this.onerror=null; this.src='images/gitam-logo.png';"
                     />
-                    <!-- <div class="text-2xl font-bold text-[#007367]">UniVision 2025</div> -->
+                    <div class="text-[#007367] font-medium text-sm md:text-base italic ml-2 tracking-wide leading-tight">
+                        Centre for Academic Innovation<br />and Advancement - CAIA
+                    </div>
                 </div>
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="hover:text-[#007367] transition-colors">Home</a>
@@ -53,7 +55,7 @@
     <!-- Hero Section -->
     <header class="pt-20 bg-[#007367] text-white">
         <div class="container mx-auto px-4 py-16">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-center">Upcoming Events</h1>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-center">Events</h1>
             <p class="text-xl text-center max-w-2xl mx-auto">Join our transformative leadership development sessions and workshops.</p>
         </div>
     </header>
@@ -79,12 +81,68 @@
     <section class="py-16">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Event Card 1 -->
                 <div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-status="upcoming">
                     <div class="relative">
-                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Leadership Survey" class="w-full h-48 object-cover">
+                        <img src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg" alt="Strategic Thinking" class="w-full h-48 object-cover">
                         <div class="absolute top-4 right-4">
                             <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Upcoming</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Strategic Thinking</h3>
+                        <p class="text-gray-600 mb-4">TBD</p>
+                        <div class="flex items-center text-gray-500 mb-4">
+                            <i class="far fa-clock mr-2"></i>
+                            <span>Duration: TBD</span>
+                        </div>
+                        <a href="#" class="inline-block bg-[#007367] text-white px-6 py-2 rounded-full hover:bg-[#004740] transition-colors">
+                            Register Now
+                        </a>
+                    </div>
+                </div>
+                <div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-status="upcoming">
+                    <div class="relative">
+                        <img src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg" alt="Innovation" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Upcoming</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Innovation</h3>
+                        <p class="text-gray-600 mb-4">TBD</p>
+                        <div class="flex items-center text-gray-500 mb-4">
+                            <i class="far fa-clock mr-2"></i>
+                            <span>Duration: TBD</span>
+                        </div>
+                        <a href="#" class="inline-block bg-[#007367] text-white px-6 py-2 rounded-full hover:bg-[#004740] transition-colors">
+                            Register Now
+                        </a>
+                    </div>
+                </div>
+                <div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-status="upcoming">
+                    <div class="relative">
+                        <img src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg" alt="People Leadership" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Upcoming</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">People Leadership</h3>
+                        <p class="text-gray-600 mb-4">TBD</p>
+                        <div class="flex items-center text-gray-500 mb-4">
+                            <i class="far fa-clock mr-2"></i>
+                            <span>Duration: TBD</span>
+                        </div>
+                        <a href="#" class="inline-block bg-[#007367] text-white px-6 py-2 rounded-full hover:bg-[#004740] transition-colors">
+                            Register Now
+                        </a>
+                    </div>
+                </div>
+                <div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-status="completed">
+                    <div class="relative">
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Leadership Survey" class="w-full h-48 object-cover grayscale">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-gray-500 text-white px-3 py-1 rounded-full text-sm">Completed</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -94,18 +152,16 @@
                             <i class="far fa-clock mr-2"></i>
                             <span>Duration: 1 week</span>
                         </div>
-                        <a href="#" class="inline-block bg-[#007367] text-white px-6 py-2 rounded-full hover:bg-[#004740] transition-colors">
-                            Start Survey
-                        </a>
+                        <button disabled class="inline-block bg-gray-400 text-white px-6 py-2 rounded-full cursor-not-allowed">
+                            Event Completed
+                        </button>
                     </div>
                 </div>
-
-                <!-- Event Card 2 -->
-                <div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-status="upcoming">
+                <div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-status="completed">
                     <div class="relative">
-                        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg" alt="StrengthsFinder Assessment" class="w-full h-48 object-cover">
+                        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg" alt="StrengthsFinder Assessment" class="w-full h-48 object-cover grayscale">
                         <div class="absolute top-4 right-4">
-                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Upcoming</span>
+                            <span class="bg-gray-500 text-white px-3 py-1 rounded-full text-sm">Completed</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -115,18 +171,16 @@
                             <i class="far fa-clock mr-2"></i>
                             <span>Duration: 2.5 weeks</span>
                         </div>
-                        <a href="#" class="inline-block bg-[#007367] text-white px-6 py-2 rounded-full hover:bg-[#004740] transition-colors">
-                            Start Assessment
-                        </a>
+                        <button disabled class="inline-block bg-gray-400 text-white px-6 py-2 rounded-full cursor-not-allowed">
+                            Event Completed
+                        </button>
                     </div>
                 </div>
-
-                <!-- Event Card 3 -->
-                <div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-status="upcoming">
+                <div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-status="completed">
                     <div class="relative">
-                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Personal Effectiveness" class="w-full h-48 object-cover">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Personal Effectiveness" class="w-full h-48 object-cover grayscale">
                         <div class="absolute top-4 right-4">
-                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Upcoming</span>
+                            <span class="bg-gray-500 text-white px-3 py-1 rounded-full text-sm">Completed</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -136,55 +190,108 @@
                             <i class="far fa-clock mr-2"></i>
                             <span>Duration: 2 days</span>
                         </div>
-                        <a href="#" class="inline-block bg-[#007367] text-white px-6 py-2 rounded-full hover:bg-[#004740] transition-colors">
-                            Apply Now
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Event Card 4 -->
-                <div class="event-card bg-white rounded-lg shadow-lg overflow-hidden" data-status="upcoming">
-                    <div class="relative">
-                        <img src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg" alt="Empathy Workshop" class="w-full h-48 object-cover">
-                        <div class="absolute top-4 right-4">
-                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Upcoming</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Empathy & Emotional Intelligence</h3>
-                        <p class="text-gray-600 mb-4">29–30 Apr, 2025</p>
-                        <div class="flex items-center text-gray-500 mb-4">
-                            <i class="far fa-clock mr-2"></i>
-                            <span>Duration: 2 days</span>
-                        </div>
-                        <a href="#" class="inline-block bg-[#007367] text-white px-6 py-2 rounded-full hover:bg-[#004740] transition-colors">
-                            Know More
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Completed Event Card (Example) -->
-                <div class="event-card bg-white rounded-lg shadow-lg overflow-hidden opacity-75" data-status="completed">
-                    <div class="relative">
-                        <img src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg" alt="Past Workshop" class="w-full h-48 object-cover grayscale">
-                        <div class="absolute top-4 right-4">
-                            <span class="bg-gray-500 text-white px-3 py-1 rounded-full text-sm">Completed</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Leadership Orientation</h3>
-                        <p class="text-gray-600 mb-4">15 Jan, 2025</p>
-                        <div class="flex items-center text-gray-500 mb-4">
-                            <i class="far fa-clock mr-2"></i>
-                            <span>Duration: 1 day</span>
-                        </div>
                         <button disabled class="inline-block bg-gray-400 text-white px-6 py-2 rounded-full cursor-not-allowed">
                             Event Completed
                         </button>
                     </div>
                 </div>
+        </div>
+    </section>
+
+    <!-- Expert Facilitators -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#007367]">Expert Facilitators</h2>
+            <div class="relative">
+            <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide" id="facilitatorCarousel" style="scroll-behavior: smooth;">
+            <!-- Facilitator cards will be dynamically populated via JavaScript -->
+            <div class="facilitator-card">
+                <div class="facilitator-image">
+                    <img src="images/kns-acharya.png" alt="Prof. KNS Acharya">
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-center">Prof. K N S Acharya</h3>
+                <p class="text-gray-600 mb-1 text-center">Pro Vice-Chancellor</p>
+                <p class="text-gray-500 mb-4 text-center">GITAM Bengaluru Campus</p>
+                <div class="text-center">
+                    <a href="https://linkedin.com/in/prof-acharya-k-n-s-73a604a" target="_blank" rel="noopener noreferrer" class="text-[#007367] hover:text-[#004740] transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="facilitator-card">
+                <div class="facilitator-image">
+                    <img src="https://pbs.twimg.com/profile_images/3731098743/cc6d4e4c5f47ec1a78f8e661ea6d00e1_400x400.jpeg" alt="Anupama Nithyanand">
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-center">Anupama Nithyanand</h3>
+                <p class="text-gray-600 mb-1 text-center">Director, CAIA</p>
+                <p class="text-gray-500 mb-4 text-center">GITAM Bengaluru Campus</p>
+                <div class="text-center">
+                    <a href="https://linkedin.com/in/anupamanithyanand" target="_blank" rel="noopener noreferrer" class="text-[#007367] hover:text-[#004740] transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="facilitator-card">
+                <div class="facilitator-image">
+                    <img src="images/jayan.jpg" alt="Dr. Jayan Sen">
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-center">Dr. Jayan Sen</h3>
+                <p class="text-gray-600 mb-1 text-center">Associate VP, Head of L&D</p>
+                <p class="text-gray-500 mb-4 text-center">Infosys Technologies</p>
+                <div class="text-center">
+                    <a href="https://linkedin.com/in/jayan-sen-ph-d" target="_blank" rel="noopener noreferrer" class="text-[#007367] hover:text-[#004740] transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+                <div class="facilitator-card">
+                <div class="facilitator-image">
+                    <img src="https://media.licdn.com/dms/image/v2/D5603AQHhnXNcrDGCPg/profile-displayphoto-shrink_400_400/B56ZXjTvLNHEAg-/0/1743275357700?e=1752105600&v=beta&t=cnGafgfZ9mF5ZDO62zF8Uu5Qo5yr8sk95_hzBP70jTs" alt="Prof. Gayatri Menon" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='images/gitam-logo.png'">
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-center">Prof. Gayatri Menon</h3>
+                <p class="text-gray-600 mb-1 text-center">Principal Faculty</p>
+                <p class="text-gray-500 mb-4 text-center">NID Ahmedabad</p>
+                <div class="text-center">
+                    <a href="https://linkedin.com/in/dr-gayatri-menon-7ba9976" target="_blank" rel="noopener noreferrer" class="text-[#007367] hover:text-[#004740] transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+                <div class="facilitator-card">
+                <div class="facilitator-image">
+                    <img src="https://media.licdn.com/dms/image/v2/D4E03AQH8YVLuGVQqWA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1706387639568?e=1752105600&v=beta&t=6UJMTBj3LxNbt7VjyUv9AeFOkp65sG5aHkGhGmHzLJg" alt="Dr. Nivine Richie">
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-center">Dr. Nivine Richie</h3>
+                <p class="text-gray-600 mb-1 text-center">Associate Dean</p>
+                <p class="text-gray-500 mb-4 text-center">UNC Wilmington, USA</p>
+                <div class="text-center">
+                    <a href="https://linkedin.com/in/nivine-richie-cfa" target="_blank" rel="noopener noreferrer" class="text-[#007367] hover:text-[#004740] transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+                <div class="facilitator-card">
+                <div class="facilitator-image">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQH1DAGgFwETIA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1727154434501?e=1752105600&v=beta&t=EocVOzGerXK5KDwMCunbzQ-9OEBhQPIM7sVsv8EEX7I" alt="Mr. Dhananjay Thakur">
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-center">Mr. Dhananjay Thakur</h3>
+                <p class="text-gray-600 mb-1 text-center">Assistant Director</p>
+                <p class="text-gray-500 mb-4 text-center">Ernst & Young (EY), Pune</p>
+                <div class="text-center">
+                    <a href="https://linkedin.com/in/dhananjay-thakur-8885b311" target="_blank" rel="noopener noreferrer" class="text-[#007367] hover:text-[#004740] transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
             </div>
         </div>
+        <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg text-[#007367] hover:text-[#004740]" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg text-[#007367] hover:text-[#004740]" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+</div>
     </section>
 
     <!-- Footer -->
