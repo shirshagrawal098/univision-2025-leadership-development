@@ -10,17 +10,18 @@
   <link rel="stylesheet" href="css/style.css" />
   <style>
     .video-container {
-      max-width: 900px;
+      max-width: 600px;
       margin: 4rem auto;
       position: relative;
       cursor: pointer;
       border-radius: 0.5rem;
       overflow: hidden;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      background: black;
+      background: rgb(0, 0, 0);
     }
     .video-thumbnail {
-      width: 100%;
+      width: 600px;
+      max-width: 100%;
       display: block;
       border-radius: 0.5rem;
     }
@@ -29,7 +30,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: white;
+      color: black;
       font-size: 4rem;
       opacity: 0.8;
       pointer-events: none;
@@ -48,7 +49,7 @@
     }
     .lightbox-content {
       position: relative;
-      max-width: 90%;
+      max-width: 100%;
       max-height: 90vh;
       background: black;
       border-radius: 0.5rem;
@@ -64,15 +65,15 @@
       z-index: 10;
       background: rgba(0,0,0,0.5);
       border-radius: 50%;
-      width: 36px;
-      height: 36px;
+      width: 50px;
+      height: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
     iframe {
-      width: 100%;
-      height: 80vh;
+      width: 150vh;
+      height: 90vh;
       border: none;
       border-radius: 0.5rem;
     }
@@ -110,14 +111,14 @@
 
   <header class="pt-20 bg-[#007367] text-white">
     <div class="container mx-auto px-4 py-16">
-      <h1 class="text-4xl md:text-6xl font-bold mb-6 text-center">Videos – 7 Habits Workshop</h1>
-      <p class="text-xl text-center max-w-2xl mx-auto">Watch videos from the 7 Habits Workshop event.</p>
+      <h1 class="text-4xl md:text-4xl font-bold mb-6 text-center">Personal Effectiveness Improvements Through 7 Habits</h1>
+      <p class="text-xl text-center max-w-3xl mx-auto">Watch videos from the event.</p>
     </div>
   </header>
 
   <main class="video-container" role="main">
     <div id="videoThumbnail" tabindex="0" aria-label="Play 7 Habits Video" class="relative cursor-pointer rounded-lg overflow-hidden shadow-lg max-w-2xl mx-auto">
-      <img src="images/video-thumb.jpg" alt="7 Habits Video Thumbnail" class="video-thumbnail" />
+      <img src="https://github.com/shirshagrawal098/univision-2025-leadership-development/blob/main/images/Videothumb.png?raw=true" alt="7 Habits Video Thumbnail" class="video-thumbnail" />
       <div class="video-play-icon"><i class="fas fa-play-circle"></i></div>
     </div>
   </main>
