@@ -26,15 +26,17 @@
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center space-x-4">
-                    <img 
-                        src="https://raw.githubusercontent.com/shirshagrawal098/univision-2025-leadership-development/refs/heads/main/images/logo.png" 
-                        alt="GITAM Logo" 
-                        class="h-12 md:h-16 lg:h-20 w-auto object-contain max-w-full transition-transform duration-300 hover:scale-105" 
-                        onerror="this.onerror=null; this.src='images/gitam-logo.png';"
-                    />
-                    <div class="text-[#007367] font-medium text-sm md:text-base italic ml-2 tracking-wide leading-tight">
-                        Centre for Academic Innovation<br />and Advancement - CAIA
-                    </div>
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img 
+                            src="https://raw.githubusercontent.com/shirshagrawal098/univision-2025-leadership-development/refs/heads/main/images/logo.png" 
+                            alt="GITAM Logo" 
+                            class="h-12 md:h-16 lg:h-20 w-auto object-contain max-w-full transition-transform duration-300 hover:scale-105" 
+                            onerror="this.onerror=null; this.src='images/gitam-logo.png';"
+                        />
+                        <div class="text-[#007367] font-medium text-sm md:text-base italic tracking-wide leading-tight">
+                            Centre for Academic Innovation<br />and Advancement - CAIA
+                        </div>
+                    </a>
                 </div>
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="hover:text-[#007367] transition-colors">Home</a>
@@ -190,70 +192,6 @@
         </div>
     </section>
 
-    <!-- Video Recordings Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-8 text-[#007367]">Video Recordings</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Video Card 1 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer video-card">
-                    <div class="relative">
-                        <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg" alt="Workshop Recording" class="w-full h-48 object-cover">
-                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                            <i class="fas fa-play-circle text-white text-4xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-semibold mb-2">Leadership Workshop Series - Part 1</h3>
-                        <p class="text-gray-600">Introduction to Academic Leadership</p>
-                    </div>
-                </div>
-
-                <!-- Video Card 2 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer video-card">
-                    <div class="relative">
-                        <img src="https://images.pexels.com/photos/3183190/pexels-photo-3183190.jpeg" alt="Workshop Recording" class="w-full h-48 object-cover">
-                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                            <i class="fas fa-play-circle text-white text-4xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-semibold mb-2">Leadership Workshop Series - Part 2</h3>
-                        <p class="text-gray-600">Building Effective Teams</p>
-                    </div>
-                </div>
-
-                <!-- Video Card 3 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer video-card">
-                    <div class="relative">
-                        <img src="https://images.pexels.com/photos/3183186/pexels-photo-3183186.jpeg" alt="Workshop Recording" class="w-full h-48 object-cover">
-                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                            <i class="fas fa-play-circle text-white text-4xl"></i>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-semibold mb-2">Leadership Workshop Series - Part 3</h3>
-                        <p class="text-gray-600">Innovation in Education</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Video Modal -->
-    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
-        <div class="bg-white rounded-lg p-4 max-w-4xl w-full mx-4">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-xl font-semibold" id="modalTitle"></h3>
-                <button class="text-gray-500 hover:text-gray-700" id="closeModal">
-                    <i class="fas fa-times text-2xl"></i>
-                </button>
-            </div>
-            <div class="aspect-w-16 aspect-h-9">
-                <div id="videoContainer"></div>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="bg-[#004740] text-white py-12">
