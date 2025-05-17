@@ -13,39 +13,134 @@
   <link rel="icon" type="image/png" href="images/gitam-logo.png">
   
   <style>
-    .event-tile {
-      position: relative;
+    /* Styles for tabs and gallery */
+    .tabs {
+      display: flex;
+      border-bottom: 2px solid #007367;
+      margin-bottom: 1rem;
       cursor: pointer;
-      overflow: hidden;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .tab {
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      color: #007367;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
+      flex: 1;
+      text-align: center;
+    }
+    .tab.active {
+      border-color: #007367;
+      color: #004740;
+    }
+    .tab-content {
+      display: none;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-item {
+      position: relative;
       border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      background: white;
+      cursor: pointer;
       transition: transform 0.3s ease;
     }
-    .event-tile:hover {
+    .gallery-item:hover {
+      transform: scale(1.03);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+    /* Video thumbnail */
+    .video-thumbnail {
+      position: relative;
+      width: 320px;
+      max-width: 100%;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      background: black;
+      margin: 0 auto;
+    }
+    .video-thumbnail:hover {
       transform: scale(1.05);
     }
-    .event-tile img {
+    .video-thumbnail img {
       width: 100%;
-      height: 200px;
-      object-fit: cover;
       display: block;
       border-radius: 0.5rem;
     }
-    .overlay {
+    .video-play-icon {
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 115, 103, 0.7);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       color: white;
-      opacity: 0;
+      font-size: 3rem;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.9);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox.active {
+      display: flex;
+    }
+    .lightbox-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90vh;
+      background: black;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      z-index: 10;
+      background: rgba(0,0,0,0.5);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 600;
-      font-size: 1.25rem;
-      border-radius: 0.5rem;
-      transition: opacity 0.3s ease;
     }
-    .event-tile:hover .overlay {
-      opacity: 1;
+    iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+      border-radius: 0.5rem;
     }
   </style>
 </head>
@@ -53,25 +148,25 @@
   <nav class="fixed top-0 w-full bg-white shadow-md z-50">
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center py-4">
-                <div class="flex items-center space-x-4">
-                  <img 
-                      src="https://raw.githubusercontent.com/shirshagrawal098/univision-2025-leadership-development/refs/heads/main/images/logo.png" 
-                      alt="GITAM Logo" 
-                      class="h-12 md:h-16 lg:h-20 w-auto object-contain max-w-full transition-transform duration-300 hover:scale-105" 
-                      onerror="this.onerror=null; this.src='images/gitam-logo.png';"
-                  />
-                  <div class="text-[#007367] font-medium text-sm md:text-base italic ml-2 tracking-wide leading-tight">
-                      Centre for Academic Innovation<br />and Advancement - CAIA
-                  </div>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="hover:text-[#007367] transition-colors">Home</a>
-                    <a href="about.html" class="hover:text-[#007367] transition-colors">About</a>
-                    <a href="events.html" class="hover:text-[#007367] transition-colors">Events</a>
-                    <a href="resources.html" class="hover:text-[#007367] transition-colors">Resources</a>
-                    <a href="gallery.html" class="text-[#007367] hover:text-[#004740] transition-colors">Gallery</a>
-                    <a href="contact.html" class="hover:text-[#007367] transition-colors">Contact</a>
-                </div>
+        <div class="flex items-center space-x-4">
+          <img 
+              src="https://raw.githubusercontent.com/shirshagrawal098/univision-2025-leadership-development/refs/heads/main/images/logo.png" 
+              alt="GITAM Logo" 
+              class="h-12 md:h-16 lg:h-20 w-auto object-contain max-w-full transition-transform duration-300 hover:scale-105" 
+              onerror="this.onerror=null; this.src='images/gitam-logo.png';"
+          />
+          <div class="text-[#007367] font-medium text-sm md:text-base italic ml-2 tracking-wide leading-tight">
+              Centre for Academic Innovation<br />and Advancement - CAIA
+          </div>
+        </div>
+        <div class="hidden md:flex space-x-8">
+            <a href="index.html" class="hover:text-[#007367] transition-colors">Home</a>
+            <a href="about.html" class="hover:text-[#007367] transition-colors">About</a>
+            <a href="events.html" class="hover:text-[#007367] transition-colors">Events</a>
+            <a href="resources.html" class="hover:text-[#007367] transition-colors">Resources</a>
+            <a href="gallery.html" class="text-[#007367] hover:text-[#004740] transition-colors">Gallery</a>
+            <a href="contact.html" class="hover:text-[#007367] transition-colors">Contact</a>
+        </div>
         <button class="md:hidden text-[#007367]">
           <i class="fas fa-bars text-2xl"></i>
         </button>
@@ -88,18 +183,33 @@
 
   <section class="py-16">
     <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-1 gap-8 max-w-2xl mx-auto">
-        <a href="gallery_7habits.html" class="event-tile" aria-label="Personal Effectiveness Through 7 Habits Gallery">
-          <img src="https://raw.githubusercontent.com/shirshagrawal098/univision-2025-leadership-development/refs/heads/main/images/event101.jpeg" 
-               alt="Personal Effectiveness Through 7 Habits"
-               onerror="this.src='images/gitam-logo.png';" 
-               class="h-[300px] w-full object-cover" />
-          <div class="overlay">View Gallery</div>
-          <h3 class="mt-2 text-center font-semibold text-xl text-gray-700">Personal Effectiveness Improvements Through 7 Habits</h3>
-        </a>
+      <h2 class="text-3xl font-bold mb-8 text-[#007367] text-center">Personal Effectiveness Improvements Through 7 Habits</h2>
+  <div class="tabs" role="tablist" aria-label="Gallery Tabs">
+    <div class="tab active" data-tab="imagesTab" role="tab" aria-selected="true" aria-controls="imagesTab" id="tab-images" tabindex="0">Images</div>
+    <div class="tab" data-tab="videosTab" role="tab" aria-selected="false" aria-controls="videosTab" id="tab-videos" tabindex="-1">Videos</div>
+  </div>
+  <div class="tab-content active" id="imagesTab" role="tabpanel" aria-labelledby="tab-images">
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://raw.githubusercontent.com/shirshagrawal098/univision-2025-leadership-development/refs/heads/main/images/event101.jpeg" alt="7 Habits Event 1" />
       </div>
     </div>
+  </div>
+  <div class="tab-content" id="videosTab" role="tabpanel" aria-labelledby="tab-videos" hidden>
+    <div class="video-thumbnail" id="videoThumbnail" role="button" tabindex="0" aria-label="Play 7 Habits Video">
+      <img src="images/video-thumb.jpg" alt="Watch Video" />
+      <div class="video-play-icon"><i class="fas fa-play-circle"></i></div>
+    </div>
+  </div>
+    </div>
   </section>
+  
+  <div class="lightbox fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden" id="videoLightbox" role="dialog" aria-modal="true" aria-label="7 Habits Video Lightbox" tabindex="-1">
+    <div class="lightbox-content relative max-w-5xl w-full rounded-lg overflow-hidden">
+      <button id="videoLightboxClose" class="absolute top-2 right-2 text-white text-3xl font-bold focus:outline-none" aria-label="Close Video Lightbox">&times;</button>
+      <iframe src="" width="3840" height="2160" frameborder="0" scrolling="no" allowfullscreen class="w-full h-[80vh] rounded-lg" id="videoIframe"></iframe>
+    </div>
+  </div>
 
   <footer class="bg-[#004740] text-white py-12">
     <div class="container mx-auto px-4">
@@ -136,7 +246,66 @@
       </div>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+  <script>
+    // Tabs functionality
+    const tabs = document.querySelectorAll('.tab');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+          t.setAttribute('tabindex', '-1');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        tab.setAttribute('tabindex', '0');
+
+        const target = tab.getAttribute('data-tab');
+        tabContents.forEach(tc => {
+          if (tc.id === target) {
+            tc.classList.add('active');
+            tc.removeAttribute('hidden');
+          } else {
+            tc.classList.remove('active');
+            tc.setAttribute('hidden', '');
+          }
+        });
+      });
+    });
+
+    // Video Lightbox
+    const videoThumbnail = document.getElementById('videoThumbnail');
+    const videoLightbox = document.getElementById('videoLightbox');
+    const videoLightboxClose = document.getElementById('videoLightboxClose');
+    const videoIframe = document.getElementById('videoIframe');
+
+    videoThumbnail.addEventListener('click', () => {
+      videoIframe.src = "https://1drv.ms/v/c/a52e4baa53fb38c7/IQRrTwvm3oNmQ4Gug9huPKTnATU4ekVWx73uN8YUNZYpIro";
+      videoLightbox.classList.add('active');
+      videoLightbox.focus();
+    });
+
+    videoLightboxClose.addEventListener('click', () => {
+      videoLightbox.classList.remove('active');
+      videoIframe.src = "";
+    });
+
+    videoLightbox.addEventListener('click', (e) => {
+      if (e.target === videoLightbox) {
+        videoLightbox.classList.remove('active');
+        videoIframe.src = "";
+      }
+    });
+
+    // Accessibility: close lightbox on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && videoLightbox.classList.contains('active')) {
+        videoLightbox.classList.remove('active');
+        videoIframe.src = "";
+      }
+    });
+  </script>
 </body>
 </html>
-</create_file>
