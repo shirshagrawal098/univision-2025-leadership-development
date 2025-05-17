@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>7 Habits Videos - UniVision 2025</title>
+  <title>Videos – 7 Habits Workshop - UniVision 2025</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" type="image/png" href="images/gitam-logo.png">
   <style>
     .video-container {
       max-width: 900px;
@@ -111,30 +110,26 @@
 
   <header class="pt-20 bg-[#007367] text-white">
     <div class="container mx-auto px-4 py-16">
-      <h1 class="text-4xl md:text-6xl font-bold mb-6 text-center">7 Habits Videos</h1>
-      <p class="text-xl text-center max-w-2xl mx-auto">Watch videos from the 7 Habits events.</p>
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 text-center">Videos – 7 Habits Workshop</h1>
+      <p class="text-xl text-center max-w-2xl mx-auto">Watch videos from the 7 Habits Workshop event.</p>
     </div>
   </header>
 
-  <section class="py-16">
-    <div class="container mx-auto px-4">
-      <div class="video-container" id="videoThumbnail" aria-label="Play 7 Habits Video">
-        <img src="https://img.youtube.com/vi/IQRrTwvm3oNmQ4Gug9huPKTnATU4ekVWx73uN8YUNZYpIro/hqdefault.jpg" alt="7 Habits Video Thumbnail" class="video-thumbnail" />
-        <div class="video-play-icon">
-          <i class="fas fa-play-circle"></i>
-        </div>
-      </div>
+  <main class="video-container" role="main">
+    <div id="videoThumbnail" tabindex="0" aria-label="Play 7 Habits Video" class="relative cursor-pointer rounded-lg overflow-hidden shadow-lg max-w-2xl mx-auto">
+      <img src="images/video-thumb.jpg" alt="7 Habits Video Thumbnail" class="video-thumbnail" />
+      <div class="video-play-icon"><i class="fas fa-play-circle"></i></div>
     </div>
-  </section>
+  </main>
 
-  <div class="lightbox" id="videoLightbox" aria-label="Video Lightbox" role="dialog" aria-modal="true" tabindex="-1">
+  <div class="lightbox" id="videoLightbox" role="dialog" aria-modal="true" aria-label="7 Habits Video Lightbox" tabindex="-1">
     <div class="lightbox-content">
       <button class="lightbox-close" id="videoLightboxClose" aria-label="Close Video Lightbox">&times;</button>
       <iframe id="videoIframe" src="" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
 
-  <footer class="bg-[#004740] text-white py-12">
+  <footer class="bg-[#004740] text-white py-12 mt-16">
     <div class="container mx-auto px-4">
       <div class="grid md:grid-cols-3 gap-8">
         <div>
@@ -177,7 +172,7 @@
     const videoIframe = document.getElementById('videoIframe');
 
     videoThumbnail.addEventListener('click', () => {
-      videoIframe.src = "https://1drv.ms/v/c/a52e4baa53fb38c7/IQRrTwvm3oNmQ4Gug9huPKTnATU4ekVWx73uN8YUNZYpIro";
+      videoIframe.src = "https://onedrive.live.com/embed?cid=a52e4baa53fb38c7&id=A52E4BAA53FB38C7!se60b4f6b83de436681ae83d86e3ca4e7&resid=A52E4BAA53FB38C7!se60b4f6b83de436681ae83d86e3ca4e7&ithint=video,mp4&embed=1&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3YvYy9hNTJlNGJhYTUzZmIzOGM3L0lRUnJUd3ZtM29ObVE0R3VnOWh1UEtUbkFUVTRla1ZXeDczdU44WVVOWllwSXJv";
       videoLightbox.classList.add('active');
       videoLightbox.focus();
     });
