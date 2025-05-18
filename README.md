@@ -1,8 +1,3 @@
-
-Built by https://www.blackbox.ai
-
----
-
 # UniVision 2025 - Leadership Development Program
 
 ## Project Overview
