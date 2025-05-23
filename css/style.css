@@ -258,3 +258,68 @@ section.visible {
 .footer-link:hover::after {
     width: 100%;
 }
+
+/* New styles for full-page vertical scroll projects */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.project-section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content {
+    max-width: 800px;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Fade-in animation on scroll */
+.project-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.project-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
